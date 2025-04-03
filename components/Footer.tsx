@@ -1,53 +1,105 @@
+"use client";
+import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <footer className="bg-[#2AA7AF] text-white py-10 mt-10">
-      <div className="container mx-auto px-6 grid md:grid-cols-4 gap-8">
-        
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="container mx-auto px-6 grid md:grid-cols-4 gap-8"
+      >
         {/* About the Shop */}
-        <div>
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="font-semibold">ABOUT THE SHOP</h3>
           <p className="text-sm mt-2">
-            <strong>Yuvraj Enterprise </strong> is a trusted hardware store located in Pakyong Bazaar, Sikkim, offering a wide range of high-quality products for construction and home improvement. Specializing in tiles, paints, electrical goods, sanitary products, and construction materials, Yuvraj Enterprise is committed to providing top-notch supplies to meet the needs of homeowners, contractors, and builders. With a focus on quality, affordability, and customer satisfaction, it serves as a one-stop destination for all hardware and building material requirements in the region.
+            <strong>Yuvraj Enterprise </strong> is a trusted hardware store located in Pakyong Bazaar, Sikkim, offering a wide range of high-quality products for construction and home improvement. Specializing in tiles, paints, electrical goods, sanitary products, and construction materials, Yuvraj Enterprise is committed to providing top-notch supplies to meet the needs of homeowners, contractors, and builders.
           </p>
-        </div>
+        </motion.div>
 
         {/* Popular Collections */}
-        <div>
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="font-semibold">POPULAR COLLECTIONS</h3>
           <ul className="text-sm mt-2 space-y-1">
-            <li>Micro Controllers</li>
-            <li>IoT Sensors</li>
-            <li>STEM Kits</li>
-            <li>Aeromodelling</li>
-            <li>Arts & Crafts</li>
+            {["Micro Controllers", "IoT Sensors", "STEM Kits", "Aeromodelling", "Arts & Crafts"].map((item, index) => (
+              <motion.li
+                key={index}
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                {item}
+              </motion.li>
+            ))}
           </ul>
-        </div>
+        </motion.div>
 
         {/* Information Links */}
-        <div>
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          transition={{ duration: 0.3 }}
+        >
           <h3 className="font-semibold">INFORMATION</h3>
           <ul className="text-sm mt-2 space-y-1">
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Terms of Service</li>
+            {["About Us", "Contact Us", "Terms of Service"].map((item, index) => (
+              <motion.li
+                key={index}
+                whileHover={{ x: 5 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                {item}
+              </motion.li>
+            ))}
           </ul>
-        </div>
-      </div>
+        </motion.div>
+
+        {/* Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image
+            src={"/images/img1.jpg"}
+            alt="image"
+            height={400}
+            width={400}
+            className="object-cover rounded-lg shadow-lg transition-transform hover:scale-105"
+          />
+        </motion.div>
+      </motion.div>
 
       {/* Bottom Section */}
-      <div className="container mx-auto mt-10 px-6 flex flex-col md:flex-row justify-between items-center border-t border-white pt-6">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="container mx-auto mt-10 px-6 flex flex-col md:flex-row justify-between items-center border-t border-white pt-6"
+      >
         <p className="text-sm">&copy; 2025 Yuvraj Enterprise</p>
 
         {/* Social Icons */}
         <div className="flex space-x-4 mt-4 md:mt-0">
-          <Facebook className="w-6 h-6 cursor-pointer" />
-          <Instagram className="w-6 h-6 cursor-pointer" />
-          <Youtube className="w-6 h-6 cursor-pointer" />
-          <Linkedin className="w-6 h-6 cursor-pointer" />
+          {[Facebook, Instagram, Youtube, Linkedin].map((Icon, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.2, rotate: 10 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="cursor-pointer"
+            >
+              <Icon className="w-6 h-6" />
+            </motion.div>
+          ))}
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };
