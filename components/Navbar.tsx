@@ -60,10 +60,47 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-white" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-          ☰
-        </button>
+        <div className="md:hidden text-white">
+          <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+            ☰
+          </button>
+        </div>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isDropdownOpen && (
+        <div className="md:hidden bg-gray-800 text-white">
+          <Link href="/" className="block px-6 py-2 hover:bg-gray-700">
+            Home
+          </Link>
+          <Link href="/about" className="block px-6 py-2 hover:bg-gray-700">
+            About Us
+          </Link>
+
+          {/* Mobile Category Dropdown */}
+          <button className="block w-full text-left px-6 py-2 hover:bg-gray-700">
+            Category
+          </button>
+          <div className="bg-gray-700">
+            <Link
+              href="/category/tiles"
+              className="block px-8 py-2 hover:bg-gray-600"
+            >
+              Tiles
+            </Link>
+            <Link
+              href="/category/electrical-items"
+              className="block px-8 py-2 hover:bg-gray-600"
+            >
+              Electrical Items
+            </Link>
+          </div>
+
+          <Link href="/contact" className="block px-6 py-2 hover:bg-gray-700">
+            Contact Us
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };
