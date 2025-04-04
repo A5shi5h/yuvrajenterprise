@@ -36,25 +36,25 @@ const Navbar = () => {
               href="/category/tiles"
               className="block px-8 py-2 hover:bg-gray-600"
             >
-                Construction Items
+                Tiles
               </Link>
               <Link
                 href="/category/electrical-items"
                 className="block px-8 py-2 hover:bg-gray-600"
               >
-                Electrical Goods
+                Electrical Items
               </Link>
               <Link
-                href="/category/electrical-items"
+                href="/category/interior-paint"
                 className="block px-8 py-2 hover:bg-gray-600"
               >
                 Interior Paints
               </Link>
               <Link
-                href="/category/electrical-items"
+                href="/category/construction-goods"
                 className="block px-8 py-2 hover:bg-gray-600"
               >
-                Tiles
+                Construction Goods
               </Link>
                 </div>
               )}
@@ -92,25 +92,25 @@ const Navbar = () => {
               href="/category/tiles"
               className="block px-8 py-2 hover:bg-gray-600"
             >
-              Construction Items
+              Tiles
             </Link>
             <Link
               href="/category/electrical-items"
               className="block px-8 py-2 hover:bg-gray-600"
             >
-              Electrical Goods
+              Electrical Items
             </Link>
             <Link
-              href="/category/electrical-items"
+              href="/category/interior-paint"
               className="block px-8 py-2 hover:bg-gray-600"
             >
               Interior Paints
             </Link>
             <Link
-              href="/category/electrical-items"
+              href="/category/construction-goods"
               className="block px-8 py-2 hover:bg-gray-600"
             >
-              Tiles
+              Construction Goods
             </Link>
           </div>
 

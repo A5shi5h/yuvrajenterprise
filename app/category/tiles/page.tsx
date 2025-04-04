@@ -9,28 +9,28 @@ const Tiles = () => {
         {
           id: 1,
           name: "Ceramic Tiles",
-          imageSrc: "/images/ceramic-tiles.jpg",
+          imageSrc: "/images/ceramic tiles.jpg",
           imageAlt: "Ceramic tiles",
           description: "Durable and easy to maintain, ideal for floors and walls.",
         },
         {
           id: 2,
           name: "Porcelain Tiles",
-          imageSrc: "/images/porcelain-tiles.jpg",
+          imageSrc: "/images/porcelain tiles.jpg",
           imageAlt: "Porcelain tiles",
           description: "Dense and water-resistant, suitable for indoor and outdoor use.",
         },
         {
           id: 3,
           name: "Mosaic Tiles",
-          imageSrc: "/images/mosaic-tiles.jpg",
+          imageSrc: "/images/mosiac tiles.jpg",
           imageAlt: "Mosaic tiles",
           description: "Small tiles that create intricate patterns and designs.",
         },
         {
           id: 4,
           name: "Glass Tiles",
-          imageSrc: "/images/glass-tiles.jpg",
+          imageSrc: "/images/glass tiles.jpg",
           imageAlt: "Glass tiles",
           description: "Reflective and colorful, perfect for backsplashes and accents.",
         },
@@ -92,20 +92,20 @@ const Tiles = () => {
             Which Tiles are Best for Different Spaces?
           </h3>
           <p className="text-gray-700">
-            - **Ceramic Tiles**: Perfect for walls and indoor floors due to their affordability and variety.<br />
-            - **Porcelain Tiles**: Highly durable and ideal for high-traffic areas such as hallways and outdoor spaces.<br />
-            - **Mosaic Tiles**: Great for adding artistic patterns to backsplashes and bathrooms.<br />
-            - **Glass Tiles**: Reflective and stylish, ideal for modern interiors and accent walls.
+            - Ceramic Tiles: Perfect for walls and indoor floors due to their affordability and variety.<br />
+            - Porcelain Tiles: Highly durable and ideal for high-traffic areas such as hallways and outdoor spaces.<br />
+            - Mosaic Tiles: Great for adding artistic patterns to backsplashes and bathrooms.<br />
+            - Glass Tiles: Reflective and stylish, ideal for modern interiors and accent walls.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 mt-6">
             Benefits of Choosing High-Quality Tiles
           </h3>
           <p className="text-gray-700">
-            - **Durability**: Our tiles are resistant to scratches, stains, and moisture.<br />
-            - **Low Maintenance**: Easy to clean and maintain, making them a long-lasting investment.<br />
-            - **Stylish Designs**: Available in a variety of colors, textures, and finishes to match your space.<br />
-            - **Eco-Friendly Options**: We offer sustainable tile solutions that contribute to a greener environment.
+            - Durability: Our tiles are resistant to scratches, stains, and moisture.<br />
+            - Low Maintenance: Easy to clean and maintain, making them a long-lasting investment.<br />
+            - Stylish Designs: Available in a variety of colors, textures, and finishes to match your space.<br />
+            - Eco-Friendly Options: We offer sustainable tile solutions that contribute to a greener environment.
           </p>
         </motion.div>
       </div>
