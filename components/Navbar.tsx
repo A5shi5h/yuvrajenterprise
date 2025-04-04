@@ -33,30 +33,36 @@ const Navbar = () => {
             {isDropdownOpen && (
               <div className="absolute left-0 mt-2 bg-white shadow-md rounded-md overflow-hidden">
                 <Link
-                  href="/category/tiles"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  Tiles
-                </Link>
-                <Link
-                  href="/category/electrical-items"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  Electrical Items
-                </Link>
-                <Link
-                  href="/category/contact-us"
-                  className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            )}
-          </div>
+              href="/category/tiles"
+              className="block px-8 py-2 hover:bg-gray-600"
+            >
+                Construction Items
+              </Link>
+              <Link
+                href="/category/electrical-items"
+                className="block px-8 py-2 hover:bg-gray-600"
+              >
+                Electrical Goods
+              </Link>
+              <Link
+                href="/category/electrical-items"
+                className="block px-8 py-2 hover:bg-gray-600"
+              >
+                Interior Paints
+              </Link>
+              <Link
+                href="/category/electrical-items"
+                className="block px-8 py-2 hover:bg-gray-600"
+              >
+                Tiles
+              </Link>
+                </div>
+              )}
+            </div>
 
-          <Link href="/contact" className="text-white hover:text-yellow-500">
-            Contact Us
-          </Link>
+            <Link href="/contact" className="text-white hover:text-yellow-500">
+              Contact Us
+            </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -86,13 +92,25 @@ const Navbar = () => {
               href="/category/tiles"
               className="block px-8 py-2 hover:bg-gray-600"
             >
-              Tiles
+              Construction Items
             </Link>
             <Link
               href="/category/electrical-items"
               className="block px-8 py-2 hover:bg-gray-600"
             >
-              Electrical Items
+              Electrical Goods
+            </Link>
+            <Link
+              href="/category/electrical-items"
+              className="block px-8 py-2 hover:bg-gray-600"
+            >
+              Interior Paints
+            </Link>
+            <Link
+              href="/category/electrical-items"
+              className="block px-8 py-2 hover:bg-gray-600"
+            >
+              Tiles
             </Link>
           </div>
 
