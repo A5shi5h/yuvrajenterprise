@@ -11,23 +11,33 @@ const AboutUs = () => {
       <div className="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-10">
         {/* Left: About Us Text */}
         <motion.div
-          className="w-full md:w-1/2"
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h1 className="text-4xl font-bold text-gray-900 max-sm:text-center">About Us</h1>
-          <p className="text-gray-700 mt-4 text-xl max-sm:text-justify max-sm:whitespace-pre-line">
-          Located in Pakyong Bazaar ,Sikkim, Yuvraj Enterprise is a trusted name in the hardware industry, catering to the needs of homeowners, contractors,and builders. We specialize in providing high-quality construction materials, tiles, paints, electrical goods, sanitary products,and other essential hardware supplies.
+              className="w-full md:w-1/2 space-y-4"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <h1 className="text-4xl font-bold text-gray-900 text-center md:text-left">
+                About Us
+              </h1>
 
-          With a commitment to quality, affordability, and customer satisfaction, Yuvraj Enterprise ensures that every product meets industry standards, offering durable and cost-effective solutions for construction and home improvement projects.
+              <p className="text-gray-700 text-base sm:text-lg text-justify leading-relaxed">
+                Located in Pakyong Bazaar, Sikkim, Yuvraj Enterprise is a trusted name in the hardware industry, catering to the needs of homeowners, contractors, and builders.
+                We specialize in providing high-quality construction materials, tiles, paints, electrical goods, sanitary products, and other essential hardware supplies.
+              </p>
 
-          Visit us today and experience the difference in quality and service!
-          </p>
-          <p className="text-gray-700 mt-2 text-xl">
-            Whether you<span>&apos;</span>re a homeowner, contractor, or builder, we provide the best products to meet your construction and renovation needs.
-          </p>
-        </motion.div>
+              <p className="text-gray-700 text-base sm:text-lg text-justify leading-relaxed">
+                With a commitment to quality, affordability, and customer satisfaction, Yuvraj Enterprise ensures that every product meets industry standards, offering durable and cost-effective solutions for construction and home improvement projects.
+              </p>
+
+              <p className="text-gray-700 text-base sm:text-lg text-justify leading-relaxed">
+                Visit us today and experience the difference in quality and service!
+              </p>
+
+              <p className="text-gray-700 text-base sm:text-lg text-justify leading-relaxed">
+                Whether you&apos;re a homeowner, contractor, or builder, we provide the best products to meet your construction and renovation needs.
+              </p>
+            </motion.div>
+
 
         {/* Right: Google Maps Embed */}
         <motion.div
@@ -36,7 +46,7 @@ const AboutUs = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <iframe
+          <iframe title="google maps"
             className="w-full h-[300px] rounded-lg shadow-md"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.2859475344695!2d88.60162681450514!3d27.248934082976084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e6a04e6fbd5b09%3A0xf5a5b59c5d8e2d68!2sPakyong%20Bazaar%2C%20Sikkim!5e0!3m2!1sen!2sin!4v1646283916767!5m2!1sen!2sin"
             allowFullScreen=""
@@ -84,7 +94,7 @@ const AboutUs = () => {
         </p>
       </section>
 
-      <section className="bg-slate-200 text-black py-12 md:mx-24">
+      <section className="bg-slate-200 text-black py-12 md:mx-24 shadow-lg shadow-slate-500">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-2xl font-semibold">Why Choose Us?</h2>
           <p className="mt-2 max-w-2xl mx-auto text-xl">
