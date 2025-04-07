@@ -160,7 +160,7 @@ export default function Contact() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="w-full py-3 px-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-md shadow-md transition duration-300 ease-in-out"
+                className="w-full py-3 px-6 bg-cyan-500 hover:bg-cyan-600 text-white font-bold rounded-md shadow-md transition duration-300 ease-in-out"
               >
                 Send Message
               </motion.button>
