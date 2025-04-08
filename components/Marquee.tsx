@@ -3,21 +3,27 @@ import { motion } from "framer-motion";
 
 const Marquee = () => {
   return (
-    <div className="relative w-full overflow-hidden bg-slate-200 py-4">
+    <div className="relative mx-4 md:mx-16 overflow-hidden bg-gradient-to-r from-slate-700 via-slate-800 to-slate-700 py-6 shadow-md">
       {/* Fade Effects on Edges */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-28 bg-gradient-to-r from-white to-transparent  z-10" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-28 bg-gradient-to-l from-white to-transparent z-10" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-slate-700 to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-slate-700 to-transparent z-10" />
 
       {/* Animated Marquee Content */}
       <motion.div
-        className="whitespace-nowrap flex gap-8 text-5xl font-serif text-gray-800 m-8 max-sm:text-2xl"
-        initial={{ x: "100%" }}
-        animate={{ x: "-100%" }}
+        className="whitespace-nowrap flex gap-12 text-4xl font-semibold font-serif text-white px-8 max-sm:text-xl max-sm:gap-8"
+        initial={{ x: "-100%" }}
+        animate={{ x: "100%" }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
       >
-        <span>🏗️ Yuvraj Enterprise – Quality Hardware, Paints, Tiles, Electricals, and More!</span>
-        <span>🏠 Visit us at Pakyong Bazaar, Sikkim | Best Prices Guaranteed</span>
-        <span>💡 One-stop solution for all your construction needs!</span>
+        <span className="text-yellow-300 drop-shadow-lg">
+          🏗️ Yuvraj Enterprise – Quality Hardware, Paints, Tiles, Electricals & More!
+        </span>
+        <span className="text-green-300 drop-shadow-lg">
+          🏠 Visit us at Pakyong Bazaar, Sikkim | Best Prices Guaranteed
+        </span>
+        <span className="text-blue-300 drop-shadow-lg">
+          💡 One-stop solution for all your construction needs!
+        </span>
       </motion.div>
     </div>
   );
