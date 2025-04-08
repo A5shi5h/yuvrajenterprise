@@ -3,14 +3,14 @@ import { motion } from "framer-motion";
 
 const Marquee = () => {
   return (
-    <div className="relative w-full overflow-hidden bg-white py-4">
+    <div className="relative w-full overflow-hidden bg-slate-200 py-4">
       {/* Fade Effects on Edges */}
       <div className="pointer-events-none absolute left-0 top-0 h-full w-28 bg-gradient-to-r from-white to-transparent  z-10" />
       <div className="pointer-events-none absolute right-0 top-0 h-full w-28 bg-gradient-to-l from-white to-transparent z-10" />
 
       {/* Animated Marquee Content */}
       <motion.div
-        className="whitespace-nowrap flex gap-8 text-xl font-medium text-gray-800"
+        className="whitespace-nowrap flex gap-8 text-5xl font-serif text-gray-800 m-8 max-sm:text-2xl"
         initial={{ x: "100%" }}
         animate={{ x: "-100%" }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}

@@ -13,9 +13,9 @@ export default function Page() {
      <Navbar />
      <Hero />
      <BestSellers />
+     <Marquee />
      <PromoBanner />
      <FeaturesSection />
-     <Marquee />
      <Footer />
     </>
    ); 
