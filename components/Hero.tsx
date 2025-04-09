@@ -32,7 +32,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative flex justify-center items-center pt-[90px]">
+    <div className="relative flex justify-center items-center pt-[90px] max-sm:pt-4">
       {/* Image Container (Centered with margin) */}
       <motion.div
         key={currentIndex}

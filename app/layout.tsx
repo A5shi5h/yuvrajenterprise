@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="relative w-full flex items-center justify-center ">
+        <div className="fixed top-0 w-full z-10">
           <Navbar />
         </div>
         {children}

@@ -46,12 +46,14 @@ const AboutUs = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <iframe title="google maps"
-            className="w-full h-[300px] rounded-lg shadow-md"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.2859475344695!2d88.60162681450514!3d27.248934082976084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e6a04e6fbd5b09%3A0xf5a5b59c5d8e2d68!2sPakyong%20Bazaar%2C%20Sikkim!5e0!3m2!1sen!2sin!4v1646283916767!5m2!1sen!2sin"
-            allowFullScreen=""
-            loading="lazy"
-          ></iframe>
+          <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d886.8149428431961!2d88.60225674550252!3d27.24238105235569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1syuvraj%20enterprises!5e0!3m2!1sen!2sin!4v1744183759633!5m2!1sen!2sin" 
+              width="700" 
+              height="450"  
+              allowFullScreen 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade">
+          </iframe>
         </motion.div>
       </div>
 

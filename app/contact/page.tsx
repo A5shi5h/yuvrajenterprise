@@ -68,13 +68,6 @@ const ContactUs = () => {
                 className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
               />
             </div>
-            <motion.button
-              type="submit"
-              whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-r from-slate-700 via-slate-800 to-slate-700 text-white px-6 py-2 rounded transition"
-            >
-              Send
-            </motion.button>
           </div>
           <div>
             <label className="block mb-1 font-semibold">Message</label>
@@ -89,6 +82,13 @@ const ContactUs = () => {
             />
           </div>
         </form>
+        <motion.button
+              type="submit"
+              whileHover={{ scale: 1.05 }}
+              className="bg-gradient-to-r from-slate-700 via-slate-800 to-slate-700 text-white px-6 py-2 rounded transition mt-4"
+            >
+              Send
+            </motion.button>
       </motion.div>
     </div>
     <Footer />

@@ -30,7 +30,7 @@ const Footer = () => {
         >
           <h3 className="font-semibold text-lg">POPULAR COLLECTIONS</h3>
           <ul className="text-sm mt-2 space-y-1">
-            {["Micro Controllers", "IoT Sensors", "STEM Kits", "Aeromodelling", "Arts & Crafts"].map((item, index) => (
+            {["Interior Paints", "Cements", "Sanitary Goods", "Tiles"].map((item, index) => (
               <motion.li
                 key={index}
                 whileHover={{ x: 5 }}
