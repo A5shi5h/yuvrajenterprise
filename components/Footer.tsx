@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2AA7AF] text-white py-10">
+    <footer className="bg-gradient-to-r from-slate-700 via-slate-800 to-slate-700 text-white py-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -17,8 +17,8 @@ const Footer = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="font-semibold">ABOUT THE SHOP</h3>
-          <p className="text-sm mt-2">
+          <h3 className="font-semibold text-lg">ABOUT THE SHOP</h3>
+          <p className="text-sm mt-2 font-light">
             <strong>Yuvraj Enterprise </strong> is a trusted hardware store located in Pakyong Bazaar, Sikkim, offering a wide range of high-quality products for construction and home improvement. Specializing in tiles, paints, electrical goods, sanitary products, and construction materials, Yuvraj Enterprise is committed to providing top-notch supplies to meet the needs of homeowners, contractors, and builders.
           </p>
         </motion.div>
@@ -28,7 +28,7 @@ const Footer = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="font-semibold">POPULAR COLLECTIONS</h3>
+          <h3 className="font-semibold text-lg">POPULAR COLLECTIONS</h3>
           <ul className="text-sm mt-2 space-y-1">
             {["Micro Controllers", "IoT Sensors", "STEM Kits", "Aeromodelling", "Arts & Crafts"].map((item, index) => (
               <motion.li
@@ -47,7 +47,7 @@ const Footer = () => {
           whileHover={{ scale: 1.02 }}
           transition={{ duration: 0.3 }}
         >
-          <h3 className="font-semibold">INFORMATION</h3>
+          <h3 className="font-semibold text-lg">INFORMATION</h3>
           <ul className="text-sm mt-2 space-y-1">
             {["About Us", "Contact Us", "Terms of Service"].map((item, index) => (
               <motion.li

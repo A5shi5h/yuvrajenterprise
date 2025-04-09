@@ -71,7 +71,7 @@ const ContactUs = () => {
             <motion.button
               type="submit"
               whileHover={{ scale: 1.05 }}
-              className="bg-cyan-500 text-white px-6 py-2 rounded hover:bg-cyan-600 transition"
+              className="bg-gradient-to-r from-slate-700 via-slate-800 to-slate-700 text-white px-6 py-2 rounded transition"
             >
               Send
             </motion.button>
