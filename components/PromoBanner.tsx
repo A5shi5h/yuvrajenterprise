@@ -34,7 +34,7 @@ const PromoBanner = () => {
           We also deal in tools
         </h2>
         <motion.p
-          className="text-gray-600 mt-2"
+          className="text-gray-600 mt-2 text-xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}

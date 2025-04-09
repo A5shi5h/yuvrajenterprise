@@ -41,7 +41,7 @@ const BestSellers = () => {
       <div className="mt-10">
         <motion.h1
           ref={ref}
-          className="text-center font-bold text-5xl font-sans"
+          className="text-center font-bold text-5xl"
           variants={headingVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -56,7 +56,7 @@ const BestSellers = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="max-w-6xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="max-w-6xl w-full bg-white rounded-lg overflow-hidden">
           {/* Product Cards */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
             {bestSellers.map((product, index) => (
