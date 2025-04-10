@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 const AboutUs = () => {
   return (
     <>
-     <div className="w-full mt-10 p-4">
+     <div className="w-full mt-14 p-4">
       {/* Hero Section with About & Google Maps */}
       <div className="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-10">
         {/* Left: About Us Text */}

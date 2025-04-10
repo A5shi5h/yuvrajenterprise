@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, MapPin, Mail } from "lucide-react";
 import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
+import Image from "next/image";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,7 +41,16 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-green-700 font-bold text-xl sm:text-2xl">
-          <Link href="/">Yuv Raj Enterprise</Link>
+          <Link href="/">
+            <Image 
+               src="/images/logo.jpeg"
+               alt="logo"
+               height={70}
+               width={70}
+               objectFit="cover"
+               className="rounded-full max-sm:h-14 max-sm:w-14"
+            />
+          </Link>
         </div>
 
         {/* Desktop Nav */}
@@ -77,7 +87,7 @@ const Navbar = () => {
           <BsWhatsapp className="w-5 h-5 cursor-pointer" />
           <BsInstagram className="w-5 h-5 cursor-pointer" />
           <BsFacebook className="w-5 h-5 cursor-pointer" />
-          <MapPin className="w-5 h-5 cursor-pointer" />
+          <Link href="/about"><MapPin className="w-5 h-5 cursor-pointer" /></Link>
           <Mail className="w-5 h-5 cursor-pointer" />
         </div>
 

@@ -82,23 +82,9 @@ const Footer = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto mt-10 px-6 flex flex-col md:flex-row justify-between items-center border-t border-white pt-6"
+        className="container mx-auto mt-10 px-6 pt-6"
       >
-        <p className="text-sm">&copy; 2025 Yuvraj Enterprise</p>
-
-        {/* Social Icons */}
-        <div className="flex space-x-4 mt-4 md:mt-0">
-          {[Facebook, Instagram, Youtube, Linkedin].map((Icon, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.2, rotate: 10 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="cursor-pointer"
-            >
-              <Icon className="w-6 h-6" />
-            </motion.div>
-          ))}
-        </div>
+        <p className="text-sm text-center">&copy; 2025 Yuvraj Enterprise</p>
       </motion.div>
     </footer>
   );
