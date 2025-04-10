@@ -116,7 +116,7 @@ const ElectricalItems = () => {
     <div className="bg-white py-6">
             <div className="max-w-screen-xl mx-auto px-4">
               <div className="text-center mb-4">
-                <h3 className="text-xl font-semibold text-gray-800">Our Trusted Tile Brands</h3>
+                <h3 className="text-xl font-semibold text-gray-800">Our Trusted Electrical Brands</h3>
               </div>
 
               <div className="relative overflow-hidden rounded-md">
@@ -127,11 +127,11 @@ const ElectricalItems = () => {
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 >
                   {[
-                    "kajaria.png",
-                    "somany.png",
-                    "orientbell.png",
-                    "johnson.png",
-                    "nitco.png",
+                    "havells.png",
+                    "anchor.png",
+                    "legrand.png",
+                    "syska.png",
+                    "polycab.png",
                   ].map((logo, index) => (
                     <div key={index} className="w-32 h-16 relative flex-shrink-0">
                       <Image
