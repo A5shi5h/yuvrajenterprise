@@ -111,6 +111,41 @@ const ElectricalItems = () => {
         </motion.div>
       </div>
     </div>
+
+    {/* === Brand Marquee Starts === */}
+    <div className="bg-white py-6">
+            <div className="max-w-screen-xl mx-auto px-4">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-semibold text-gray-800">Our Trusted Tile Brands</h3>
+              </div>
+
+              <div className="relative overflow-hidden rounded-md">
+                <motion.div
+                  className="flex gap-12 px-8 items-center whitespace-nowrap"
+                  initial={{ x: "100%" }}
+                  animate={{ x: "-100%" }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                >
+                  {[
+                    "kajaria.png",
+                    "somany.png",
+                    "orientbell.png",
+                    "johnson.png",
+                    "nitco.png",
+                  ].map((logo, index) => (
+                    <div key={index} className="w-32 h-16 relative flex-shrink-0">
+                      <Image
+                        src={`/images/logos/${logo}`}
+                        alt={`${logo.split(".")[0]} logo`}
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
+            </div>
+          </div>
     <Footer />
     </>
   );

@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, MapPin, Mail } from "lucide-react";
+import { Menu, X, ChevronDown, MapPin} from "lucide-react";
 import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 import Image from "next/image";
 
@@ -88,7 +88,6 @@ const Navbar = () => {
           <BsInstagram className="w-5 h-5 cursor-pointer" />
           <BsFacebook className="w-5 h-5 cursor-pointer" />
           <Link href="/about"><MapPin className="w-5 h-5 cursor-pointer" /></Link>
-          <Mail className="w-5 h-5 cursor-pointer" />
         </div>
 
         {/* Mobile Menu Button */}
