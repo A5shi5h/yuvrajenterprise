@@ -16,12 +16,12 @@ const Marquee = () => {
         transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
       >
         <span className="text-green-700 drop-shadow-sm">
-          Yuvraj Enterprise – Quality Hardware, Paints, Tiles, Electricals & More!
+          Yuvraj Enterprise –</span><span className="text-black">Quality Hardware, Paints, Tiles, Electricals & More!
         </span>
-        <span className="text-blue-700 drop-shadow-sm">
+        <span>
           Visit us at Pakyong Bazaar, Sikkim | Best Prices Guaranteed
         </span>
-        <span className="text-yellow-600 drop-shadow-sm">
+        <span>
           One-stop solution for all your construction needs!
         </span>
       </motion.div>
