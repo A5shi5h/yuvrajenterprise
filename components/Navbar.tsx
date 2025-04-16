@@ -84,10 +84,10 @@ const Navbar = () => {
 
         {/* Desktop Icons */}
         <div className="hidden md:flex items-center space-x-4 text-gray-700">
-          <BsWhatsapp className="w-5 h-5 cursor-pointer" />
-          <BsInstagram className="w-5 h-5 cursor-pointer" />
-          <BsFacebook className="w-5 h-5 cursor-pointer" />
-          <Link href="/about"><MapPin className="w-5 h-5 cursor-pointer" /></Link>
+          <BsWhatsapp className="w-5 h-5 cursor-pointer hover:scale-120" />
+          <BsInstagram className="w-5 h-5 cursor-pointer hover:scale-120" />
+          <BsFacebook className="w-5 h-5 cursor-pointer hover:scale-120" />
+          <Link href="/about"><MapPin className="w-5 h-5 cursor-pointer hover:scale-120" /></Link>
         </div>
 
         {/* Mobile Menu Button */}
