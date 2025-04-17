@@ -124,9 +124,9 @@ const ConstructionGoods = () => {
             <div className="relative overflow-hidden rounded-md">
               <motion.div
                 className="flex gap-12 px-8 items-center whitespace-nowrap"
-                initial={{ x: "100%" }}
-                animate={{ x: "-100%" }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                initial={{ x: "-85%" }}
+                animate={{ x: "100%" }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
               >
                 {[
                   "ultratech.png",
