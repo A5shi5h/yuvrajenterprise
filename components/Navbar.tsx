@@ -55,8 +55,8 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8 font-medium text-gray-800">
-          <Link href="/" className="hover:text-green-600 transition">Home</Link>
-          <Link href="/about" className="hover:text-green-600 transition">About</Link>
+          <Link href="/" className="transition hover:bg-green-400 p-2 rounded-lg">Home</Link>
+          <Link href="/about" className="hover:bg-green-400 p-2 rounded-lg transition">About</Link>
 
           {/* Dropdown */}
           <div
@@ -64,7 +64,7 @@ const Navbar = () => {
             onMouseEnter={() => setCategoryOpen(true)}
             onMouseLeave={() => setCategoryOpen(false)}
           >
-            <button className="flex items-center gap-1 hover:text-green-600 transition">
+            <button className="flex items-center gap-1 hover:bg-green-400 p-2 rounded-lg transition">
               Category <ChevronDown className="w-4 h-4" />
             </button>
             <div
@@ -79,7 +79,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Link href="/contact" className="hover:text-green-600 transition">Contact</Link>
+          <Link href="/contact" className="hover:bg-green-400 p-2 rounded-lg transition">Contact</Link>
         </div>
 
         {/* Desktop Icons */}
