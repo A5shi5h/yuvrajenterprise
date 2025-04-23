@@ -46,14 +46,15 @@ const AboutUs = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d886.8149428431961!2d88.60225674550252!3d27.24238105235569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1syuvraj%20enterprises!5e0!3m2!1sen!2sin!4v1744183759633!5m2!1sen!2sin" 
-              width="700" 
-              height="450"  
-              allowFullScreen 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade">
-          </iframe>
+         <div className="w-full h-64 sm:h-96 md:h-[450px] rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d886.8149428431961!2d88.60225674550252!3d27.24238105235569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1syuvraj%20enterprises!5e0!3m2!1sen!2sin!4v1744183759633!5m2!1sen!2sin"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full border-0">
+            </iframe>
+        </div>
         </motion.div>
       </div>
 
