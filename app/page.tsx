@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import Navbar from "@/components/Navbar";
 import PromoBanner from "@/components/PromoBanner";
+import ServicesSection from "@/components/ServiceSection";
 
 
 export default function Page() {
@@ -16,6 +17,7 @@ export default function Page() {
      <Marquee />
      <PromoBanner />
      <FeaturesSection />
+     <ServicesSection />
      <Footer />
     </>
    ); 
