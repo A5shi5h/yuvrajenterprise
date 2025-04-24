@@ -49,14 +49,15 @@ const Navbar = () => {
                width={70}
                objectFit="cover"
                className="rounded-full max-sm:h-14 max-sm:w-14 shadow-md shadow-black"
+               loading="lazy"
             />
           </Link>
         </div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8 font-medium text-gray-800">
-          <Link href="/" className="transition hover:bg-green-400 p-2 rounded-lg">Home</Link>
-          <Link href="/about" className="hover:bg-green-400 p-2 rounded-lg transition">About</Link>
+          <Link href="/" className="transition hover:bg-[#A3B2B5] p-2 rounded-lg">Home</Link>
+          <Link href="/about" className="hover:bg-[#A3B2B5] p-2 rounded-lg transition">About</Link>
 
           {/* Dropdown */}
           <div
@@ -64,7 +65,7 @@ const Navbar = () => {
             onMouseEnter={() => setCategoryOpen(true)}
             onMouseLeave={() => setCategoryOpen(false)}
           >
-            <button className="flex items-center gap-1 hover:bg-green-400 p-2 rounded-lg transition">
+            <button className="flex items-center gap-1 hover:bg-[#A3B2B5] p-2 rounded-lg transition">
               Category <ChevronDown className="w-4 h-4" />
             </button>
             <div
@@ -72,14 +73,14 @@ const Navbar = () => {
                 categoryOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible"
               }`}
             >
-              <Link href="/category/tiles" className="block px-6 py-2 hover:bg-green-50 text-sm">Tiles</Link>
-              <Link href="/category/electrical-items" className="block px-6 py-2 hover:bg-green-50 text-sm">Electrical Items</Link>
-              <Link href="/category/interior-paint" className="block px-6 py-2 hover:bg-green-50 text-sm">Interior Paints</Link>
-              <Link href="/category/construction-goods" className="block px-6 py-2 hover:bg-green-50 text-sm">Construction Goods</Link>
+              <Link href="/category/tiles" className="block px-6 py-2 hover:bg-[#A3B2B5] text-sm">Tiles</Link>
+              <Link href="/category/electrical-items" className="block px-6 py-2 hover:bg-[#A3B2B5] text-sm">Electrical Items</Link>
+              <Link href="/category/interior-paint" className="block px-6 py-2 hover:bg-[#A3B2B5] text-sm">Interior Paints</Link>
+              <Link href="/category/construction-goods" className="block px-6 py-2 hover:bg-[#A3B2B5] text-sm">Construction Goods</Link>
             </div>
           </div>
 
-          <Link href="/contact" className="hover:bg-green-400 p-2 rounded-lg transition">Contact</Link>
+          <Link href="/contact" className="hover:bg-[#A3B2B5] p-2 rounded-lg transition">Contact</Link>
         </div>
 
         {/* Desktop Icons */}
