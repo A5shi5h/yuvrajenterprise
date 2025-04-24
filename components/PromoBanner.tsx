@@ -19,7 +19,7 @@ const PromoBanner = () => {
           alt="Tools Offer"
           width={700}
           height={450}
-          className="rounded-lg shadow-md"
+          className="rounded-lg shadow-lg shadow-black"
         />
       </motion.div>
 
