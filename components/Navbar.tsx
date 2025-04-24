@@ -48,7 +48,7 @@ const Navbar = () => {
                height={70}
                width={70}
                objectFit="cover"
-               className="rounded-full max-sm:h-14 max-sm:w-14"
+               className="rounded-full max-sm:h-14 max-sm:w-14 shadow-md shadow-black"
             />
           </Link>
         </div>
