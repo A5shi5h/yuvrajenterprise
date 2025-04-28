@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
@@ -64,12 +66,12 @@ const AboutUs = () => {
           <h2 className="text-2xl font-semibold text-gray-900">What We Deal In</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             {[
-              { title: "Tiles & Flooring", img: "/images/tiles-flooring.jpg" },
-              { title: "Paints & Coatings", img: "/images/paints.jpg" },
-              { title: "Electrical Goods", img: "/images/electrical.jpg" },
-              { title: "Sanitary Products", img: "/images/sanitary.jpg" },
-              { title: "Construction Materials", img: "/images/construction.jpg" },
-              { title: "Hardware & Tools", img: "/images/tools.jpg" }
+              { title: "Tiles & Flooring", img: "/images/tiles-flooring.jpg" , description: "tiles" },
+              { title: "Paints & Coatings", img: "/images/paints.jpg" , description: "interior-paint" },
+              { title: "Electrical Goods", img: "/images/electrical.jpg" , description: "electrical-items"},
+              { title: "Sanitary Products", img: "/images/sanitary.jpg" , description: "tiles" },
+              { title: "Construction Materials", img: "/images/construction.jpg" , description: "construction-goods"},
+              { title: "Hardware & Tools", img: "/images/tools.jpg" , description: "electrical-items"}
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -83,7 +85,8 @@ const AboutUs = () => {
                   height={150}
                   className="rounded-md h-36"
                 />
-                <h3 className="mt-4 font-semibold">{item.title}</h3>
+                <h3 className="mt-4 font-semibold mb-2">{item.title}</h3>
+                <Link href={"category/"+item.description}><ArrowRight /></Link>
               </motion.div>
             ))}
           </div>
