@@ -28,11 +28,11 @@ const Navbar = () => {
     <nav className={`sticky top-0 z-50 bg-white border-b border-slate-300 transition-all duration-500 ease-in-out ${scrolled ? 'shadow-md' : 'shadow-none'}`}>
       {showHeading && (
         <div className={`text-center transition-all duration-500 ease-in-out max-sm:hidden ${scrolled ? 'p-1 text-sm' : 'p-2'}`}>
-        <h1 className={`font-bold transition-all duration-500 ${scrolled ? 'text-xl' : 'text-2xl'}`}>YUV RAJ ENTERPRISE</h1>
-        <h2 className={`font-semibold transition-all duration-500 ${scrolled ? 'text-base' : 'text-lg'} pt-1`}>
+        <h1 className={`font-serif font-bold transition-all duration-500 ${scrolled ? 'text-xl' : 'text-3xl'}`}>YUV RAJ ENTERPRISE</h1>
+        <h2 className={`font-serif font-bold transition-all duration-500 ${scrolled ? 'text-base' : 'text-xl'} pt-1`}>
           HARDWARE RETAIL STORE
         </h2>
-        <p className={`font-thin transition-all duration-500 ${scrolled ? 'text-sm' : 'text-lg'} pt-1`}>
+        <p className={`font-sans font-semibold transition-all duration-500 ${scrolled ? 'text-sm' : 'text-lg'} pt-1`}>
           Deals in Tiles, Electrical Goods, Sanitary Products and Construction Materials
         </p>
       </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8 font-medium text-gray-800">
+        <div className="hidden md:flex items-center space-x-8 font-medium text-gray-800 text-lg">
           <Link href="/" className="transition hover:bg-[#A3B2B5] p-2 rounded-lg">Home</Link>
           <Link href="/about" className="hover:bg-[#A3B2B5] p-2 rounded-lg transition">About</Link>
 
