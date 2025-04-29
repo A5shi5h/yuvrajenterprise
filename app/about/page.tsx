@@ -100,7 +100,7 @@ const AboutUs = () => {
         </p>
       </section>
 
-      <section className="bg-slate-200 text-black py-12 md:mx-24 shadow-lg shadow-slate-500">
+      <section className="bg-slate-300 text-black py-12 md:mx-24 shadow-lg shadow-slate-500">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-2xl font-semibold">Why Choose Us?</h2>
           <p className="mt-2 max-w-2xl mx-auto text-xl">

@@ -41,7 +41,7 @@ const BestSellers = () => {
       <div className="mt-10">
         <motion.h1
           ref={ref}
-          className="text-3xl md:text-4xl font-bold text-gray-900 text-center"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 text-center"
           variants={headingVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}

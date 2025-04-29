@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, MapPin} from "lucide-react";
+import { Menu, X, ChevronDown, MapPin } from "lucide-react";
 import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 import Image from "next/image";
 
@@ -11,55 +10,37 @@ const Navbar = () => {
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false);
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20); // Adjust threshold as needed
+      setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const showHeading = pathname === "/" && !scrolled;
-
   return (
     <nav className={`sticky top-0 z-50 bg-white border-b border-slate-300 transition-all duration-500 ease-in-out ${scrolled ? 'shadow-md' : 'shadow-none'}`}>
-      {showHeading && (
-        <div className={`text-center transition-all duration-500 ease-in-out max-sm:hidden ${scrolled ? 'p-1 text-sm' : 'p-2'}`}>
-        <h1 className={`font-serif font-bold transition-all duration-500 ${scrolled ? 'text-xl' : 'text-3xl'}`}>YUV RAJ ENTERPRISE</h1>
-        <h2 className={`font-serif font-bold transition-all duration-500 ${scrolled ? 'text-base' : 'text-xl'} pt-1`}>
-          HARDWARE RETAIL STORE
-        </h2>
-        <p className={`font-sans font-semibold transition-all duration-500 ${scrolled ? 'text-sm' : 'text-lg'} pt-1`}>
-          Deals in Tiles, Electrical Goods, Sanitary Products and Construction Materials
-        </p>
-      </div>
-      )}
-
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-3 py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="text-green-700 font-bold text-xl sm:text-2xl">
           <Link href="/">
             <Image 
-               src="/images/logo.jpeg"
-               alt="logo"
-               height={70}
-               width={70}
-               objectFit="cover"
-               className="rounded-full max-sm:h-14 max-sm:w-14 shadow-md shadow-black"
-               loading="lazy"
+              src="/images/logo.jpeg"
+              alt="logo"
+              height={60}
+              width={60}
+              objectFit="cover"
+              className="rounded-full max-sm:h-14 max-sm:w-14 shadow-md shadow-black"
+              loading="lazy"
             />
           </Link>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8 font-medium text-gray-800 text-lg">
+        <div className="hidden md:flex items-center space-x-9 font-thin text-gray-800 text-md">
           <Link href="/" className="transition hover:bg-[#A3B2B5] p-2 rounded-lg">Home</Link>
           <Link href="/about" className="hover:bg-[#A3B2B5] p-2 rounded-lg transition">About</Link>
-
-          {/* Dropdown */}
           <div
             className="relative group"
             onMouseEnter={() => setCategoryOpen(true)}
@@ -79,16 +60,15 @@ const Navbar = () => {
               <Link href="/category/construction-goods" className="block px-6 py-2 hover:bg-[#A3B2B5] text-sm">Construction Goods</Link>
             </div>
           </div>
-
           <Link href="/contact" className="hover:bg-[#A3B2B5] p-2 rounded-lg transition">Contact</Link>
         </div>
 
         {/* Desktop Icons */}
         <div className="hidden md:flex items-center space-x-4 text-gray-700">
-          <BsWhatsapp className="w-5 h-5 cursor-pointer hover:scale-120" />
-          <BsInstagram className="w-5 h-5 cursor-pointer hover:scale-120" />
-          <BsFacebook className="w-5 h-5 cursor-pointer hover:scale-120" />
-          <Link href="/about"><MapPin className="w-5 h-5 cursor-pointer hover:scale-120" /></Link>
+          <BsWhatsapp className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform" />
+          <BsInstagram className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform" />
+          <BsFacebook className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform" />
+          <Link href="/about"><MapPin className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform" /></Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -104,8 +84,6 @@ const Navbar = () => {
         <div className="md:hidden bg-white px-4 pb-4 space-y-2 font-medium text-gray-800">
           <Link href="/" className="block py-2 border-b hover:text-green-600">Home</Link>
           <Link href="/about" className="block py-2 border-b hover:text-green-600">About</Link>
-
-          {/* Mobile Dropdown */}
           <div>
             <button
               onClick={() => setMobileCategoryOpen(!mobileCategoryOpen)}
@@ -122,7 +100,6 @@ const Navbar = () => {
               </div>
             )}
           </div>
-
           <Link href="/contact" className="block py-2 border-t hover:text-green-600">Contact</Link>
         </div>
       )}
