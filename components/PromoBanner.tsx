@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const PromoBanner = () => {
   return (
@@ -31,11 +34,11 @@ const PromoBanner = () => {
           transition={{ duration: 0.8 }}
           className="text-left"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h2 className={`text-xl sm:text-3xl font-bold text-gray-800 mt-2 ${inter.className}`}>
             We also deal in tools
           </h2>
           <motion.p
-            className="text-gray-600 mt-4 text-xl"
+            className="text-md sm:text-lg font-medium text-gray-700 mt-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
