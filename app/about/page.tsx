@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 
 const AboutUs = () => {
   return (
@@ -18,24 +19,24 @@ const AboutUs = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-4xl font-bold text-gray-900 text-center md:text-left">
-                About Us
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                ABOUT US
               </h1>
 
-              <p className="text-gray-700 text-base sm:text-lg text-justify leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed">
                 Located in Pakyong Bazaar, Sikkim, Yuvraj Enterprise is a trusted name in the hardware industry, catering to the needs of homeowners, contractors, and builders.
                 We specialize in providing high-quality construction materials, tiles, paints, electrical goods, sanitary products, and other essential hardware supplies.
               </p>
 
-              <p className="text-gray-700 text-base sm:text-lg text-justify leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed">
                 With a commitment to quality, affordability, and customer satisfaction, Yuvraj Enterprise ensures that every product meets industry standards, offering durable and cost-effective solutions for construction and home improvement projects.
               </p>
 
-              <p className="text-gray-700 text-base sm:text-lg text-justify leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed">
                 Visit us today and experience the difference in quality and service!
               </p>
 
-              <p className="text-gray-700 text-base sm:text-lg text-justify leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed">
                 Whether you&apos;re a homeowner, contractor, or builder, we provide the best products to meet your construction and renovation needs.
               </p>
             </motion.div>
@@ -93,21 +94,52 @@ const AboutUs = () => {
         </div>
       </section>
 
-      <section className="container mx-auto px-6 py-12 text-center">
-        <h2 className="text-3xl font-bold text-gray-900">Our Mission & Vision</h2>
-        <p className="text-gray-700 mt-4 max-w-3xl mx-auto text-xl">
-          At Yuvraj Enterprise, we aim to provide high-quality materials and excellent customer service to support construction and home improvement projects. Our vision is to become Sikkim’s most reliable and customer-friendly hardware supplier.
-        </p>
-      </section>
+      {/* Owner Section */}
+          <section className="bg-white py-16 px-6 md:px-16">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              
+              {/* Left: Image */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="flex justify-center"
+              >
+                <Image
+                  src="/images/owner.jpg"  // Make sure to place your owner's image in public/images
+                  alt="Owner"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover shadow-lg"
+                />
+              </motion.div>
 
-      <section className="bg-slate-300 text-black py-12 md:mx-24 shadow-lg shadow-slate-500">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl font-semibold">Why Choose Us?</h2>
-          <p className="mt-2 max-w-2xl mx-auto text-xl">
-            We believe in quality, affordability, and exceptional customer service. Whether you<span>&apos;</span>re building a home or upgrading a workspace, we<span>&apos;</span><span/>re here to help with expert advice and top-quality materials.
-          </p>
-        </div>
-      </section>
+              {/* Right: Text */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-left"
+              >
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                  ABOUT THE OWNER
+                </h2>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  Yuvraj Enterprise was founded with the goal of supplying quality materials to the people of Sikkim and beyond. With a strong background in retail and a commitment to reliability, our journey has always been customer-first.
+                  <br /><br />
+                  Our owner has spent years building relationships in the hardware industry to ensure our customers get access to top-quality products at fair prices. At Yuvraj Enterprise, we don’t just sell goods—we support your building dreams with integrity and passion.
+                </p>
+
+                {/* Optional Social Icons */}
+                <div className="flex space-x-4 mt-6 text-gray-700">
+                  <Link href="#"><BsFacebook className="w-6 h-6 hover:text-blue-600" /></Link>
+                  <Link href="#"><BsInstagram className="w-6 h-6 hover:text-pink-600" /></Link>
+                  <Link href="#"><BsWhatsapp className="w-6 h-6 hover:text-green-600" /></Link>
+                </div>
+              </motion.div>
+
+            </div>
+          </section>
     </div>
     <Footer />
     </>

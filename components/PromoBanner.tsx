@@ -11,8 +11,9 @@ const PromoBanner = () => {
         {/* Left Image Section with Animation */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center"
         >
           <Image
             src="/images/tools.jpg"
@@ -25,10 +26,10 @@ const PromoBanner = () => {
 
         {/* Right Text Section with Animation */}
         <motion.div
-          className="flex flex-col justify-center"
           initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-left"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             We also deal in tools
