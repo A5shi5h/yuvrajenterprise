@@ -31,40 +31,42 @@ const Hero = () => {
 
   return (
     <div className="pt-[50px] max-sm:pt-4 px-4">
-      {/* Header Text Above Slider */}
-          <motion.div
-            className="text-center mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <motion.h1
-              className={`text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 ${inter.className}`}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              YUV RAJ ENTERPRISE
-            </motion.h1>
-
-            <motion.h2
-              className={`text-xl sm:text-3xl text-gray-800 mt-2 ${inter.className}`}
-              initial={{ opacity: 0, y: -10 }}
+      
+          {/* Header Text Above Slider */}
+            <motion.div
+              className="text-center mb-8"
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              HARDWARE RETAIL STORE
-            </motion.h2>
+              <motion.h1
+                className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${inter.className}`}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                YUV RAJ ENTERPRISE
+              </motion.h1>
 
-            <motion.p
-              className="text-md sm:text-lg text-gray-700 mt-2"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              Deals in Tiles, Electrical Goods, Sanitary Products and Construction Materials
-            </motion.p>
-          </motion.div>
+              <motion.h2
+                className={`text-xl sm:text-3xl font-bold text-gray-800 mt-2 ${inter.className}`}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                HARDWARE RETAIL STORE
+              </motion.h2>
+
+              <motion.p
+                className="text-md sm:text-lg font-medium text-gray-700 mt-2"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                Deals in Tiles, Electrical Goods, Sanitary Products and Construction Materials
+              </motion.p>
+            </motion.div>
+
 
 
       {/* Slider */}
