@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const services = [
   { title: "Project planning", icon: "📊", description: "Strategic blueprints for successful builds." },
@@ -22,8 +25,8 @@ export default function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="mb-10 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">A comprehensive set of services</h2>
-          <p className="text-gray-600 max-w-xl mx-auto">
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${inter.className}`}>A comprehensive set of services</h2>
+          <p className="text-md sm:text-lg font-medium text-gray-700 mt-2">
             We offer a wide array of construction-related services designed to meet the diverse needs of our clients with precision and care.
           </p>
         </motion.div>
