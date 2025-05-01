@@ -30,7 +30,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="pt-[50px] max-sm:pt-4 px-4">
+    <div className="pt-[100px] max-sm:pt-12 px-4">
       
           {/* Header Text Above Slider */}
             <motion.div
