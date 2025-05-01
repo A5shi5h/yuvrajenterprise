@@ -134,7 +134,6 @@ const AboutUs = () => {
                 <div className="flex space-x-4 mt-6 text-gray-700">
                   <Link href="#"><BsFacebook className="w-6 h-6 hover:text-blue-600" /></Link>
                   <Link href="#"><BsInstagram className="w-6 h-6 hover:text-pink-600" /></Link>
-                  <Link href="#"><BsWhatsapp className="w-6 h-6 hover:text-green-600" /></Link>
                 </div>
               </motion.div>
 

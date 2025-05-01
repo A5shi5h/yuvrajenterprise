@@ -65,10 +65,10 @@ const Navbar = () => {
 
         {/* Desktop Icons */}
         <div className="hidden md:flex items-center space-x-4 text-gray-700">
-          <BsWhatsapp className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform" />
-          <BsInstagram className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform" />
-          <BsFacebook className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform" />
-          <Link href="/about"><MapPin className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform" /></Link>
+          <BsWhatsapp className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform hover:text-green-600" />
+          <BsInstagram className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform hover:text-pink-600"/>
+          <BsFacebook className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform hover:text-blue-600" />
+          <Link href="/about"><MapPin className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform hover:text-red-600" /></Link>
         </div>
 
         {/* Mobile Menu Button */}
