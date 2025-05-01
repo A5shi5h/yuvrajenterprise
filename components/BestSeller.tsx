@@ -41,7 +41,7 @@ const BestSellers = () => {
 
   return (
     <>
-      <div className="mt-10">
+      <div className="mt-24">
         <motion.h1
           ref={ref}
           className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 text-center ${inter.className}`}

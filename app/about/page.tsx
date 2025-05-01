@@ -64,7 +64,7 @@ const AboutUs = () => {
       {/* Keep the rest of the page unchanged */}
       <section className="bg-gray-100 py-12">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl font-semibold text-gray-900">What We Deal In</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Deal In</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             {[
               { title: "Tiles & Flooring", img: "/images/tiles-flooring.jpg" , description: "tiles" },
@@ -86,7 +86,7 @@ const AboutUs = () => {
                   height={150}
                   className="rounded-md h-36"
                 />
-                <h3 className="mt-4 font-semibold mb-2">{item.title}</h3>
+                <h3 className="text-gray-600 text-lg leading-relaxed pt-2">{item.title}</h3>
                 <Link href={"category/"+item.description}><ArrowRight /></Link>
               </motion.div>
             ))}
