@@ -26,7 +26,7 @@ export default function ServicesSection() {
           className="mb-10 text-center"
         >
           <h2 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${inter.className}`}>A comprehensive set of services</h2>
-          <p className="text-md sm:text-lg font-medium text-gray-700 mt-2">
+          <p className="text-gray-600 text-lg leading-relaxed">
             We offer a wide array of construction-related services designed to meet the diverse needs of our clients with precision and care.
           </p>
         </motion.div>
@@ -44,10 +44,10 @@ export default function ServicesSection() {
             >
               <div className="text-4xl mb-4">{service.icon}</div>
               <div className="flex items-center justify-between">
-                <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
+                <h3 className={`text-xl sm:text-3xl font-bold text-gray-800 mt-2 ${inter.className}`}>{service.title}</h3>
                 <ArrowUpRight className="w-5 h-5 text-gray-500 group-hover:text-black transition-all" />
               </div>
-              <p className="text-gray-600 mt-2">{service.description}</p>
+              <p className="text-gray-600 text-lg leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>

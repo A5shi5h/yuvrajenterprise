@@ -34,11 +34,11 @@ const PromoBanner = () => {
           transition={{ duration: 0.8 }}
           className="text-left"
         >
-          <h2 className={`text-xl sm:text-3xl font-bold text-gray-800 mt-2 ${inter.className}`}>
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${inter.className}`}>
             We also deal in tools
           </h2>
           <motion.p
-            className="text-md sm:text-lg font-medium text-gray-700 mt-2"
+            className="text-gray-600 text-lg leading-relaxed"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}

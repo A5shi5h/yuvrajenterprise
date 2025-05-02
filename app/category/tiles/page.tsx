@@ -2,6 +2,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+
 
 const Tiles = () => {
     
@@ -43,7 +47,7 @@ const Tiles = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Tiles Collection Section */}
         <motion.h2
-          className="text-3xl font-extrabold text-gray-900 text-center mb-6"
+          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 text-center mb-6 ${inter.className}`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -67,7 +71,7 @@ const Tiles = () => {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800">{tile.name}</h3>
+                <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>{tile.name}</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">{tile.description}</p>
               </div>
             </motion.div>
@@ -81,14 +85,14 @@ const Tiles = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-2 ${inter.className}`}>
             Why Choose Our Tiles?
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
             Tiles are an essential part of home and commercial space aesthetics, offering durability, easy maintenance, and a variety of styles. At Yuvraj Enterprise, we provide high-quality ceramic, porcelain, mosaic, and glass tiles that suit every taste and requirement.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>
             Which Tiles are Best for Different Spaces?
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -98,7 +102,7 @@ const Tiles = () => {
             - Glass Tiles: Reflective and stylish, ideal for modern interiors and accent walls.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>
             Benefits of Choosing High-Quality Tiles
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -115,7 +119,7 @@ const Tiles = () => {
           <div className="bg-white py-6">
             <div className="max-w-screen-xl mx-auto px-4">
               <div className="text-center mb-4">
-                <h3 className="text-xl font-semibold text-gray-800">Our Trusted Tile Brands</h3>
+                <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>Our Trusted Tile Brands</h3>
               </div>
 
               <div className="relative overflow-hidden rounded-md">

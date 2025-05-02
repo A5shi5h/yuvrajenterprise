@@ -25,13 +25,13 @@ const Marquee = () => {
 
       {/* Marquee Text */}
       <motion.div
-        className="whitespace-nowrap flex gap-12 text-2xl font-semibold font-serif text-gray-800 px-8 max-sm:text-lg max-sm:gap-8"
+        className="whitespace-nowrap flex gap-12 text-gray-600 text-lg leading-relaxed px-8 max-sm:text-lg max-sm:gap-8"
         initial={{ x: "-100%" }}
         animate={{ x: "100%" }}
         transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
       >
         <span className="text-green-700">Yuvraj Enterprise –</span>
-        <span className="text-black">Quality Hardware, Paints, Tiles, Electricals & More!</span>
+        <span>Quality Hardware, Paints, Tiles, Electricals & More!</span>
         <span>Visit us at Pakyong Bazaar, Sikkim | Best Prices Guaranteed</span>
         <span>One-stop solution for all your construction needs!</span>
       </motion.div>
