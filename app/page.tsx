@@ -15,9 +15,9 @@ export default function Page() {
      <Hero />
      <BestSellers />
      <Marquee />
-     <PromoBanner />
-     <FeaturesSection />
      <ServicesSection />
+     <FeaturesSection />
+     <PromoBanner />
      <Footer />
     </>
    ); 

@@ -21,15 +21,15 @@ const Navbar = () => {
 
   return (
     <nav className={`sticky top-0 z-50 bg-white border-b border-slate-300 transition-all duration-500 ease-in-out ${scrolled ? 'shadow-md' : 'shadow-none'}`}>
-      <div className="max-w-7xl mx-auto px-3 py-3 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-2 py-2 flex justify-between items-center">
         {/* Logo */}
         <div className="text-green-700 font-bold text-xl sm:text-2xl">
           <Link href="/">
             <Image 
               src="/images/logo.jpeg"
               alt="logo"
-              height={60}
-              width={60}
+              height={50}
+              width={50}
               objectFit="cover"
               className="rounded-full max-sm:h-14 max-sm:w-14 shadow-md shadow-black"
               loading="lazy"
