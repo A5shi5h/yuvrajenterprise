@@ -69,7 +69,7 @@ const InteriorPaints = () => {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800">{paint.name}</h3>
-                <p className="text-gray-600 mt-2">{paint.description}</p>
+                <p className="text-gray-600 text-lg leading-relaxed">{paint.description}</p>
               </div>
             </motion.div>
           ))}
@@ -85,14 +85,14 @@ const InteriorPaints = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Why Choose Our Interior Paints?
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             At Yuvraj Enterprise, we offer high-quality interior paints that enhance your home’s aesthetic and durability. Our paints are designed to provide vibrant colors, long-lasting protection, and smooth finishes, ensuring your walls look beautiful for years.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 mt-6">
             Types of Interior Paints We Offer:
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             - Luxury Emulsion: Rich and smooth finish with high durability.<br />
             - Matte Finish: Elegant non-glossy look with easy maintenance.<br />
             - Washable Paint: Ideal for families, allowing easy cleaning of stains.<br />
@@ -102,7 +102,7 @@ const InteriorPaints = () => {
           <h3 className="text-xl font-semibold text-gray-900 mt-6">
             Benefits of Choosing High-Quality Paints
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             - Superior Aesthetic Appeal: Enhances the beauty of your interiors.<br />
             - Durability & Longevity: Resists fading, stains, and wear over time.<br />
             - Eco-Friendly & Low VOC: Safe for indoor air quality and environment.<br />
