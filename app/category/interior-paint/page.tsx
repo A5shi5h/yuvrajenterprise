@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const interiorPaints = [
   {
@@ -42,12 +45,12 @@ const InteriorPaints = () => {
         
         {/* Section Title with Animation */}
         <motion.h2
-          className="text-3xl font-extrabold text-gray-900 text-center mb-6"
+          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 text-center mb-10 ${inter.className}`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Interior Paints Collection
+          OUR INTERIOR PAINTS COLLECTION
         </motion.h2>
 
         {/* Grid Display of Products */}
@@ -68,8 +71,8 @@ const InteriorPaints = () => {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800">{paint.name}</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">{paint.description}</p>
+              <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>{paint.name}</h3>
+              <p className="text-gray-600 text-lg leading-relaxed">{paint.description}</p>
               </div>
             </motion.div>
           ))}
@@ -82,14 +85,14 @@ const InteriorPaints = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-2 ${inter.className}`}>
             Why Choose Our Interior Paints?
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
             At Yuvraj Enterprise, we offer high-quality interior paints that enhance your home’s aesthetic and durability. Our paints are designed to provide vibrant colors, long-lasting protection, and smooth finishes, ensuring your walls look beautiful for years.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>
             Types of Interior Paints We Offer:
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -99,7 +102,7 @@ const InteriorPaints = () => {
             - Anti-Fungal Paint: Protects walls from moisture and fungal damage.<br />
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>
             Benefits of Choosing High-Quality Paints
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -116,7 +119,7 @@ const InteriorPaints = () => {
           <div className="bg-white py-6">
             <div className="max-w-screen-xl mx-auto px-4">
               <div className="text-center mb-4">
-                <h3 className="text-xl font-semibold text-gray-800">Our Trusted Paints Brands</h3>
+                <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>Our Trusted Paints Brands</h3>
               </div>
 
               <div className="relative overflow-hidden rounded-md">

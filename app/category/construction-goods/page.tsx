@@ -2,6 +2,10 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+
 
 const constructionGoods = [
   {
@@ -42,12 +46,12 @@ const ConstructionGoods = () => {
         
         {/* Section Title with Animation */}
         <motion.h2
-          className="text-3xl font-extrabold text-gray-900 text-center mb-6"
+          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 text-center mb-10 ${inter.className}`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Construction Goods Collection
+          OUR CONSTRUCTION GOODS COLLECTION
         </motion.h2>
 
         {/* Grid Display of Products */}
@@ -68,8 +72,8 @@ const ConstructionGoods = () => {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
-                <p className="text-gray-600 text-lg leading-relaxed">{item.description}</p>
+              <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>{item.name}</h3>
+              <p className="text-gray-600 text-lg leading-relaxed">{item.description}</p>
               </div>
             </motion.div>
           ))}
@@ -82,7 +86,7 @@ const ConstructionGoods = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-2 ${inter.className}`}>
             Why Choose Our Construction Materials?
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -91,7 +95,7 @@ const ConstructionGoods = () => {
             and contractors for residential and commercial projects.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>
             Types of Construction Goods We Offer:
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -101,7 +105,7 @@ const ConstructionGoods = () => {
             - Construction Chemicals: Waterproofing solutions, adhesives, and curing compounds.<br />
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>
             Benefits of Choosing High-Quality Materials
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -118,7 +122,7 @@ const ConstructionGoods = () => {
         <div className="bg-white py-6">
           <div className="max-w-screen-xl mx-auto px-4">
             <div className="text-center mb-4">
-              <h3 className="text-xl font-semibold text-gray-800">Top Construction Brands We Offer</h3>
+            <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>Top Construction Brands We Offer</h3>
             </div>
 
             <div className="relative overflow-hidden rounded-md">

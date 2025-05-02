@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const electricalItems = [
   {
@@ -42,12 +45,12 @@ const ElectricalItems = () => {
         
         {/* Section Title with Animation */}
         <motion.h2
-          className="text-3xl font-extrabold text-gray-900 text-center mb-6"
+          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 text-center mb-10 ${inter.className}`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Our Electrical Products
+          OUR ELECTRICAL PRODUCTS
         </motion.h2>
 
         {/* Grid Display of Products */}
@@ -68,7 +71,7 @@ const ElectricalItems = () => {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
+              <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>{item.name}</h3>
                 <p className="text-gray-600 text-lg leading-relaxed">{item.description}</p>
               </div>
             </motion.div>
@@ -82,14 +85,14 @@ const ElectricalItems = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-2 ${inter.className}`}>
             Why Choose Our Electrical Products?
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
             At Yuvraj Enterprise, we provide top-quality electrical items for homes, offices, and industries. Our products are sourced from trusted brands, ensuring safety, efficiency, and durability.
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>
             Types of Electrical Products We Offer:
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -99,7 +102,7 @@ const ElectricalItems = () => {
             - Fans & Ventilation: Efficient cooling solutions for all environments.<br />
           </p>
 
-          <h3 className="text-xl font-semibold text-gray-900 mt-6">
+          <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>
             Benefits of Choosing the Right Electrical Goods
           </h3>
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -116,7 +119,7 @@ const ElectricalItems = () => {
     <div className="bg-white py-6">
             <div className="max-w-screen-xl mx-auto px-4">
               <div className="text-center mb-4">
-                <h3 className="text-xl font-semibold text-gray-800">Our Trusted Electrical Brands</h3>
+              <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>Our Trusted Electrical Brands</h3>
               </div>
 
               <div className="relative overflow-hidden rounded-md">
