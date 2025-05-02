@@ -69,7 +69,7 @@ const ConstructionGoods = () => {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
-                <p className="text-gray-600 mt-2">{item.description}</p>
+                <p className="text-gray-600 text-lg leading-relaxed">{item.description}</p>
               </div>
             </motion.div>
           ))}
@@ -85,7 +85,7 @@ const ConstructionGoods = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Why Choose Our Construction Materials?
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             At Yuvraj Enterprise, we provide high-quality construction materials that ensure 
             strength, durability, and reliability. Our products are trusted by builders, engineers, 
             and contractors for residential and commercial projects.
@@ -94,7 +94,7 @@ const ConstructionGoods = () => {
           <h3 className="text-xl font-semibold text-gray-900 mt-6">
             Types of Construction Goods We Offer:
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             - Cement: Premium-grade cement for high-strength concrete structures.<br />
             - Steel Rods: Strong reinforcement bars for structural integrity.<br />
             - Bricks & Blocks: High-quality bricks and concrete blocks for solid walls.<br />
@@ -104,7 +104,7 @@ const ConstructionGoods = () => {
           <h3 className="text-xl font-semibold text-gray-900 mt-6">
             Benefits of Choosing High-Quality Materials
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             - Durability & Strength: Ensures long-lasting buildings and structures.<br />
             - Reliable Performance: Meets industry standards for safety and quality.<br />
             - Cost-Effective Solutions: Reduces maintenance and repair costs over time.<br />

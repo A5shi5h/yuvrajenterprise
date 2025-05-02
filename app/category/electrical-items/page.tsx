@@ -69,7 +69,7 @@ const ElectricalItems = () => {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
-                <p className="text-gray-600 mt-2">{item.description}</p>
+                <p className="text-gray-600 text-lg leading-relaxed">{item.description}</p>
               </div>
             </motion.div>
           ))}
@@ -85,14 +85,14 @@ const ElectricalItems = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Why Choose Our Electrical Products?
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             At Yuvraj Enterprise, we provide top-quality electrical items for homes, offices, and industries. Our products are sourced from trusted brands, ensuring safety, efficiency, and durability.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 mt-6">
             Types of Electrical Products We Offer:
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             - LED Bulbs & Lighting: Energy-saving and long-lasting illumination.<br />
             - Electrical Wiring & Cables: High-quality insulated wires for secure connections.<br />
             - Switches & Sockets: Reliable electrical components for homes and businesses.<br />
@@ -102,7 +102,7 @@ const ElectricalItems = () => {
           <h3 className="text-xl font-semibold text-gray-900 mt-6">
             Benefits of Choosing the Right Electrical Goods
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             - Energy Efficiency: Reduce electricity bills with our energy-saving products.<br />
             - Safety Assurance: All products comply with industry safety standards.<br />
             - Durability & Reliability: Long-lasting materials for better performance.<br />
