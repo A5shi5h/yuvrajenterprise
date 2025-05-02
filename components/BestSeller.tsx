@@ -86,7 +86,7 @@ const BestSellers = () => {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                   >
-                    <h3 className={`text-xl sm:text-3xl font-bold text-white mt-2 ${inter.className}`}>
+                    <h3 className="text-md sm:text-lg font-medium text-white">
                       {product.title}
                     </h3>
                   </motion.div>
