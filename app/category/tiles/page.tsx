@@ -68,7 +68,7 @@ const Tiles = () => {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-800">{tile.name}</h3>
-                <p className="text-gray-600 mt-2">{tile.description}</p>
+                <p className="text-gray-600 text-lg leading-relaxed">{tile.description}</p>
               </div>
             </motion.div>
           ))}
@@ -84,14 +84,14 @@ const Tiles = () => {
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
             Why Choose Our Tiles?
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             Tiles are an essential part of home and commercial space aesthetics, offering durability, easy maintenance, and a variety of styles. At Yuvraj Enterprise, we provide high-quality ceramic, porcelain, mosaic, and glass tiles that suit every taste and requirement.
           </p>
 
           <h3 className="text-xl font-semibold text-gray-900 mt-6">
             Which Tiles are Best for Different Spaces?
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             - Ceramic Tiles: Perfect for walls and indoor floors due to their affordability and variety.<br />
             - Porcelain Tiles: Highly durable and ideal for high-traffic areas such as hallways and outdoor spaces.<br />
             - Mosaic Tiles: Great for adding artistic patterns to backsplashes and bathrooms.<br />
@@ -101,7 +101,7 @@ const Tiles = () => {
           <h3 className="text-xl font-semibold text-gray-900 mt-6">
             Benefits of Choosing High-Quality Tiles
           </h3>
-          <p className="text-gray-700">
+          <p className="text-gray-600 text-lg leading-relaxed">
             - Durability: Our tiles are resistant to scratches, stains, and moisture.<br />
             - Low Maintenance: Easy to clean and maintain, making them a long-lasting investment.<br />
             - Stylish Designs: Available in a variety of colors, textures, and finishes to match your space.<br />
