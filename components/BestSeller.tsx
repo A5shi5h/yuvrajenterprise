@@ -59,7 +59,7 @@ const BestSellers = () => {
             key={index}
             className={`
               relative rounded-2xl overflow-hidden border border-neutral-800
-              hover:border-white transition duration-300 p-6 flex flex-col justify-between
+              hover:border-white transition duration-300 p-6 flex flex-col justify-between 
               ${index === 2 ? "lg:row-span-2" : ""}
               ${index === 3 ? "sm:col-span-2" : ""}
             `}
@@ -78,22 +78,23 @@ const BestSellers = () => {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/60 z-10"></div>
+            <div className="absolute inset-0 bg-black/60 z-10 hover:bg-black/40">
 
-            {/* Content */}
-            <div className="relative z-20 h-full flex flex-col justify-between">
-              <span className="text-sm text-neutral-300 mb-2">{item.number}</span>
-              <div>
-                <h3 className="text-2xl font-bold text-neutral-300">{item.title}</h3>
-                <p className="text-neutral-300 text-sm">{item.subtitle}</p>
+              {/* Content */}
+              <div className="relative z-20 h-full flex flex-col justify-between p-6">
+                <span className="text-sm text-neutral-300 mb-2">{item.number}</span>
+                <div>
+                  <h3 className="text-2xl font-bold text-neutral-300">{item.title}</h3>
+                  <p className="text-neutral-300 text-sm">{item.subtitle}</p>
+                </div>
+                <Link
+                  href={item.link}
+                  className="mt-4 text-white underline underline-offset-4 hover:text-gray-300 transition"
+                >
+                  Explore →
+                </Link>
               </div>
-              <Link
-                href={item.link}
-                className="mt-4 text-white underline underline-offset-4 hover:text-gray-300 transition"
-              >
-                Explore →
-              </Link>
-            </div>
+          </div>
           </motion.div>
         ))}
       </div>
