@@ -10,23 +10,31 @@ const inter = Inter({ subsets: ["latin"] });
 const bestSellers = [
   {
     title: "CONSTRUCTION",
+    subtitle: "Bricks, Cement, Sand, etc.",
+    number: "01",
+    link: "/category/construction-goods",
     img: "/images/construction.jpg",
-    link: "/category/construction",
   },
   {
     title: "ELECTRICAL GOODS",
+    subtitle: "Switches, Wires, Lights, etc.",
+    number: "02",
+    link: "/category/electrical-items",
     img: "/images/electrical goods.jpg",
-    link: "/category/electrical-goods",
   },
   {
     title: "INTERIOR PAINTS",
+    subtitle: "Textures, Waterproof, etc.",
+    number: "03",
+    link: "/category/interior-paint",
     img: "/images/interior paint.jpg",
-    link: "/category/interior-paints",
   },
   {
     title: "TILES",
-    img: "/images/tiles.jpg",
+    subtitle: "Flooring, Wall, Bathroom, etc.",
+    number: "04",
     link: "/category/tiles",
+    img: "/images/tiles.jpg",
   },
 ];
 
@@ -34,69 +42,61 @@ const BestSellers = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const headingVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
-    <>
-      <div className="mt-24">
-        <motion.h1
-          ref={ref}
-          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 text-center ${inter.className}`}
-          variants={headingVariants}
-          initial="hidden"
-          animate={isInView ? "visible" : "hidden"}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          Our Best Sellers
-        </motion.h1>
-      </div>
-      <motion.div
-        className="flex justify-center items-center w-full py-10 px-5"
+    <section className="text-black py-20 px-4 md:px-10" ref={ref}>
+      <motion.h2
+        className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-center mb-16 ${inter.className}`}
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8 }}
       >
-        <div className="max-w-6xl w-full bg-white rounded-lg overflow-hidden">
-          {/* Product Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
-            {bestSellers.map((product, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                className="relative"
+        Our Best Sellers
+      </motion.h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto auto-rows-[300px] sm:auto-rows-[300px]">
+        {bestSellers.map((item, index) => (
+          <motion.div
+            key={index}
+            className={`
+              relative rounded-2xl overflow-hidden border border-neutral-800
+              hover:border-white transition duration-300 p-6 flex flex-col justify-between
+              ${index === 2 ? "lg:row-span-2" : ""}
+              ${index === 3 ? "sm:col-span-2" : ""}
+            `}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.6 }}
+          >
+            {/* Background Image */}
+            <Image
+              src={item.img}
+              alt={item.title}
+              layout="fill"
+              objectFit="cover"
+              className="absolute inset-0 w-full h-full object-cover z-0"
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/60 z-10"></div>
+
+            {/* Content */}
+            <div className="relative z-20 h-full flex flex-col justify-between">
+              <span className="text-sm text-neutral-300 mb-2">{item.number}</span>
+              <div>
+                <h3 className="text-2xl font-bold text-neutral-300">{item.title}</h3>
+                <p className="text-neutral-300 text-sm">{item.subtitle}</p>
+              </div>
+              <Link
+                href={item.link}
+                className="mt-4 text-white underline underline-offset-4 hover:text-gray-300 transition"
               >
-                <Link href={product.link} className="block">
-                  <div className="w-full h-60 md:h-80 lg:h-96 relative">
-                    <Image
-                      src={product.img}
-                      alt={product.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded-md"
-                    />
-                  </div>
-                  <motion.div
-                    className="absolute inset-0 flex flex-col justify-center items-center bg-black/50 opacity-100 rounded-md"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4, duration: 0.6 }}
-                  >
-                    <h3 className="text-md sm:text-lg font-medium text-white">
-                      {product.title}
-                    </h3>
-                  </motion.div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-    </>
+                Explore →
+              </Link>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
   );
 };
 
