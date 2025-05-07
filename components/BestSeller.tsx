@@ -73,6 +73,7 @@ const BestSellers = () => {
               alt={item.title}
               layout="fill"
               objectFit="cover"
+              loading="lazy"
               className="absolute inset-0 w-full h-full object-cover z-0"
             />
 
