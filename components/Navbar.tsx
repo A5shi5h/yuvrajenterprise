@@ -52,7 +52,8 @@ const Navbar = () => {
             onMouseEnter={() => setCategoryOpen(true)}
             onMouseLeave={() => setCategoryOpen(false)}
           >
-            <button className="flex items-center gap-1 hover:bg-[#A3B2B5] p-2 rounded-lg transition">
+            <button title="button" 
+              className="flex items-center gap-1 hover:bg-[#A3B2B5] p-2 rounded-lg transition">
               Category <ChevronDown className="w-4 h-4" />
             </button>
             <div
@@ -79,7 +80,8 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-600">
+          <button title="button" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-gray-600">
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -92,7 +94,8 @@ const Navbar = () => {
         } md:hidden`}
       >
         <div className="flex justify-end p-4">
-          <button onClick={() => setMobileMenuOpen(false)}>
+          <button title="button" 
+            onClick={() => setMobileMenuOpen(false)}>
             <X className="w-6 h-6 text-gray-600" />
           </button>
         </div>
@@ -100,7 +103,7 @@ const Navbar = () => {
           <Link href="/" className="block py-2 border-b hover:text-green-600">Home</Link>
           <Link href="/about" className="block py-2 border-b hover:text-green-600">About</Link>
           <div>
-            <button
+            <button title="button"
               onClick={() => setMobileCategoryOpen(!mobileCategoryOpen)}
               className="w-full text-left py-2 flex justify-between items-center hover:text-green-600"
             >

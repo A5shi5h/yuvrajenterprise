@@ -9,6 +9,10 @@ const meriva = nextFont({
   src: "../public/fonts/meriva.ttf",
 })
 
+const sansation = nextFont({
+  src: "../public/fonts/Sansation-Light.ttf",
+});
+
 const bestSellers = [
   {
     title: "CONSTRUCTION",
@@ -86,8 +90,8 @@ const BestSellers = () => {
               <div className="relative z-20 h-full flex flex-col justify-between p-6">
                 <span className="text-sm text-neutral-300 mb-2">{item.number}</span>
                 <div>
-                  <h3 className="text-2xl font-bold text-neutral-300">{item.title}</h3>
-                  <p className="text-neutral-300 text-sm">{item.subtitle}</p>
+                  <h3 className={`${sansation.className} text-3xl font-normal text-white`}>{item.title}</h3>
+                  <p className={`${sansation.className} text-neutral-300 text-sm`}>{item.subtitle}</p>
                 </div>
                 <Link
                   href={item.link}
