@@ -3,6 +3,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import { Inter } from "next/font/google";
+import nextFont from "next/font/local";
+
+const meriva = nextFont({
+  src: "../../../public/fonts/meriva.ttf",
+})
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,7 +52,7 @@ const Tiles = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Tiles Collection Section */}
         <motion.h2
-          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 text-center mb-10 ${inter.className}`}
+          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 text-center mb-10 ${meriva.className}`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -119,7 +124,7 @@ const Tiles = () => {
           <div className="bg-white py-6">
             <div className="max-w-screen-xl mx-auto px-4">
               <div className="text-center mb-4">
-                <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${inter.className}`}>Our Trusted Tile Brands</h3>
+                <h3 className={`text-xl sm:text-3xl font-semibold text-gray-800 mt-6 ${meriva.className}`}>Our Trusted Tile Brands</h3>
               </div>
 
               <div className="relative overflow-hidden rounded-md">

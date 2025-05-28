@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Inter } from "next/font/google";
+import nextFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const meriva = nextFont({
+  src: "../public/fonts/meriva.ttf",
+})
 
 const PromoBanner = () => {
   return (
@@ -34,7 +36,7 @@ const PromoBanner = () => {
           transition={{ duration: 0.8 }}
           className="text-left"
         >
-          <h2 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${inter.className}`}>
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${meriva.className}`}>
             We also deal in tools
           </h2>
           <motion.p

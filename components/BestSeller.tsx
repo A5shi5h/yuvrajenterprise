@@ -3,9 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Inter } from "next/font/google";
+import nextFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const meriva = nextFont({
+  src: "../public/fonts/meriva.ttf",
+})
 
 const bestSellers = [
   {
@@ -45,7 +47,7 @@ const BestSellers = () => {
   return (
     <section className="text-black py-20 px-4 md:px-10" ref={ref}>
       <motion.h2
-        className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-center mb-10 ${inter.className}`}
+        className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-center mb-10 ${meriva.className}`}
         initial={{ opacity: 0, y: 50 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}

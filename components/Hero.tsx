@@ -3,9 +3,15 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { Inter } from "next/font/google";
+import nextFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const meriva = nextFont({
+  src: "../public/fonts/meriva.ttf",
+})
+
+const sansation = nextFont({
+  src: "../public/fonts/Sansation-Light.ttf",
+});
 
 const images = ["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"];
 
@@ -52,29 +58,41 @@ const Hero = () => {
           </>
         )}
 
-      {/* Header Content after Slider */}
-      <motion.div
+     {/* Header Content after Slider */}
+        <motion.div
           className="text-center mb-10"
           initial={{ opacity: 0, y: 40 }}
           animate={isLoaded ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           <motion.h1
-            className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${inter.className}`}
+            className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${meriva.className}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.4 }}
           >
             YUV RAJ ENTERPRISE
           </motion.h1>
 
           <motion.h2
-            className={`text-xl sm:text-3xl font-bold text-gray-800 mt-2 ${inter.className}`}
+            className={`text-xl sm:text-3xl font-bold text-gray-800 mt-2 ${meriva.className}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.6 }}
           >
             HARDWARE RETAIL STORE
           </motion.h2>
 
-          <motion.p className="text-md sm:text-lg font-medium text-gray-700 mt-2">
+          <motion.p
+            className={`${sansation.className} text-md sm:text-xl font-light text-gray-700 mt-2`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.8 }}
+          >
             Deals in Tiles, Electrical Goods, Sanitary Products and Construction Materials
           </motion.p>
         </motion.div>
+
 
       <div className={`${!isLoaded ? "invisible" : "visible"} transition-opacity duration-700`}>
         {/* Slider First */}

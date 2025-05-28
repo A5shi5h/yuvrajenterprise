@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
+import { BsFacebook, BsInstagram} from "react-icons/bs";
+import nextFont from "next/font/local";
+
+const meriva = nextFont({
+  src: "../../public/fonts/meriva.ttf",
+})
 
 const AboutUs = () => {
   return (
@@ -19,7 +24,7 @@ const AboutUs = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <h1 className={`${meriva.className} text-4xl md:text-5xl font-bold text-gray-900 mb-4`}>
                 ABOUT US
               </h1>
 
@@ -64,7 +69,7 @@ const AboutUs = () => {
       {/* Keep the rest of the page unchanged */}
       <section className="bg-gray-100 py-12">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What We Deal In</h2>
+          <h2 className={`${meriva.className} text-4xl md:text-5xl font-bold text-gray-900 mb-4`}>What We Deal In</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             {[
               { title: "Tiles & Flooring", img: "/images/tiles-flooring.jpg" , description: "tiles" },
@@ -121,7 +126,7 @@ const AboutUs = () => {
                 transition={{ duration: 0.8 }}
                 className="text-left"
               >
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                <h2 className={`${meriva.className} text-4xl md:text-5xl font-bold text-gray-900 mb-4`}>
                   ABOUT THE OWNER
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed">

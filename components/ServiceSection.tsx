@@ -3,6 +3,12 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Inter } from "next/font/google";
+import nextFont from "next/font/local";
+
+const meriva = nextFont({
+  src: "../public/fonts/meriva.ttf",
+})
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +31,7 @@ export default function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="mb-10 text-center"
         >
-          <h2 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${inter.className}`}>A comprehensive set of services</h2>
+          <h2 className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 ${meriva.className}`}>A comprehensive set of services</h2>
           <p className="text-gray-600 text-lg leading-relaxed">
             We offer a wide array of construction-related services designed to meet the diverse needs of our clients with precision and care.
           </p>

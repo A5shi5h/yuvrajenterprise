@@ -1,9 +1,15 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown, MapPin } from "lucide-react";
 import { BsFacebook, BsInstagram, BsWhatsapp } from "react-icons/bs";
 import Image from "next/image";
+import nextFont from "next/font/local";
+
+const sansation = nextFont({
+  src: "../public/fonts/Sansation-Light.ttf",
+});
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,8 +34,8 @@ const Navbar = () => {
             <Image 
               src="/images/logo.jpeg"
               alt="logo"
-              height={50}
-              width={50}
+              height={70}
+              width={70}
               objectFit="cover"
               className="rounded-full max-sm:h-14 max-sm:w-14 shadow-md shadow-black"
               loading="lazy"
@@ -38,7 +44,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-9 font-thin text-gray-800 text-md">
+        <div className={`${sansation.className} hidden md:flex items-center space-x-9 font-normal text-lg`}>
           <Link href="/" className="transition hover:bg-[#A3B2B5] p-2 rounded-lg">Home</Link>
           <Link href="/about" className="hover:bg-[#A3B2B5] p-2 rounded-lg transition">About</Link>
           <div
@@ -54,10 +60,10 @@ const Navbar = () => {
                 categoryOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-2 invisible"
               }`}
             >
-              <Link href="/category/tiles" className="block px-6 py-2 hover:bg-[#A3B2B5] text-sm">Tiles</Link>
-              <Link href="/category/electrical-items" className="block px-6 py-2 hover:bg-[#A3B2B5] text-sm">Electrical Items</Link>
-              <Link href="/category/interior-paint" className="block px-6 py-2 hover:bg-[#A3B2B5] text-sm">Interior Paints</Link>
-              <Link href="/category/construction-goods" className="block px-6 py-2 hover:bg-[#A3B2B5] text-sm">Construction Goods</Link>
+              <Link href="/category/tiles" className="block px-6 py-2 hover:bg-[#A3B2B5] text-md">Tiles</Link>
+              <Link href="/category/electrical-items" className="block px-6 py-2 hover:bg-[#A3B2B5] text-md">Electrical Items</Link>
+              <Link href="/category/interior-paint" className="block px-6 py-2 hover:bg-[#A3B2B5] text-md">Interior Paints</Link>
+              <Link href="/category/construction-goods" className="block px-6 py-2 hover:bg-[#A3B2B5] text-md">Construction Goods</Link>
             </div>
           </div>
           <Link href="/contact" className="hover:bg-[#A3B2B5] p-2 rounded-lg transition">Contact</Link>
@@ -65,10 +71,10 @@ const Navbar = () => {
 
         {/* Desktop Icons */}
         <div className="hidden md:flex items-center space-x-4 text-gray-700">
-          <BsWhatsapp className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform hover:text-green-600" />
-          <BsInstagram className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform hover:text-pink-600"/>
-          <BsFacebook className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform hover:text-blue-600" />
-          <Link href="/about"><MapPin className="w-5 h-5 cursor-pointer hover:scale-110 transition-transform hover:text-red-600" /></Link>
+          <BsWhatsapp className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform hover:text-green-600" />
+          <BsInstagram className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform hover:text-pink-600"/>
+          <BsFacebook className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform hover:text-blue-600" />
+          <Link href="/about"><MapPin className="w-6 h-6 cursor-pointer hover:scale-110 transition-transform hover:text-red-600" /></Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -79,9 +85,18 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-white px-4 pb-4 space-y-2 font-medium text-gray-800">
+      {/* Mobile Slide-In Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
+          mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        } md:hidden`}
+      >
+        <div className="flex justify-end p-4">
+          <button onClick={() => setMobileMenuOpen(false)}>
+            <X className="w-6 h-6 text-gray-600" />
+          </button>
+        </div>
+        <div className="px-4 pb-4 space-y-2 font-normal text-sm text-gray-800">
           <Link href="/" className="block py-2 border-b hover:text-green-600">Home</Link>
           <Link href="/about" className="block py-2 border-b hover:text-green-600">About</Link>
           <div>
@@ -102,7 +117,7 @@ const Navbar = () => {
           </div>
           <Link href="/contact" className="block py-2 border-t hover:text-green-600">Contact</Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 };
