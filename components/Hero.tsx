@@ -5,31 +5,14 @@ import Image from "next/image";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import nextFont from "next/font/local";
 
-const meriva = nextFont({
-  src: "../public/fonts/meriva.ttf",
-})
-
-const sansation = nextFont({
-  src: "../public/fonts/Sansation-Light.ttf",
-});
+const meriva = nextFont({ src: "../public/fonts/meriva.ttf" });
+const sansation = nextFont({ src: "../public/fonts/Sansation-Light.ttf" });
 
 const images = ["/images/img1.jpg", "/images/img2.jpg", "/images/img3.jpg"];
 
-const Hero = () => {
+const Hero = ({ isLoaded }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
 
-  // Black loader timeout
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-      document.body.style.overflow = "auto";
-    }, 2000);
-    document.body.style.overflow = "hidden";
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Autoplay slider
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -41,61 +24,60 @@ const Hero = () => {
     <div className="relative pt-[100px] max-sm:pt-12 px-4 min-h-[80vh] overflow-hidden bg-white">
 
       {/* Dual curtain loader */}
-        {!isLoaded && (
-          <>
-            <motion.div
-              initial={{ height: "50%" }}
-              animate={{ height: 0 }}
-              transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
-              className="fixed top-0 left-0 w-full bg-black z-[9999] origin-top"
-            />
-            <motion.div
-              initial={{ height: "50%" }}
-              animate={{ height: 0 }}
-              transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
-              className="fixed bottom-0 left-0 w-full bg-black z-[9999] origin-bottom"
-            />
-          </>
-        )}
+      {!isLoaded && (
+        <>
+          <motion.div
+            initial={{ height: "50%" }}
+            animate={{ height: 0 }}
+            transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+            className="fixed top-0 left-0 w-full bg-black z-[9999] origin-top"
+          />
+          <motion.div
+            initial={{ height: "50%" }}
+            animate={{ height: 0 }}
+            transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+            className="fixed bottom-0 left-0 w-full bg-black z-[9999] origin-bottom"
+          />
+        </>
+      )}
 
-     {/* Header Content after Slider */}
-        <motion.div
-          className="text-center mb-10"
-          initial={{ opacity: 0, y: 40 }}
+      {/* Header Content after Slider */}
+      <motion.div
+        className="text-center mb-10"
+        initial={{ opacity: 0, y: 40 }}
+        animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, delay: 1.2 }}
+      >
+        <motion.h1
+          className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${meriva.className}`}
+          initial={{ opacity: 0, y: 20 }}
           animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
         >
-          <motion.h1
-            className={`text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 ${meriva.className}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 1.4 }}
-          >
-            YUV RAJ ENTERPRISE
-          </motion.h1>
+          YUV RAJ ENTERPRISE
+        </motion.h1>
 
-          <motion.h2
-            className={`text-xl sm:text-3xl font-bold text-gray-800 mt-2 ${meriva.className}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 1.6 }}
-          >
-            HARDWARE RETAIL STORE
-          </motion.h2>
+        <motion.h2
+          className={`text-xl sm:text-3xl font-bold text-gray-800 mt-2 ${meriva.className}`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 1.6 }}
+        >
+          HARDWARE RETAIL STORE
+        </motion.h2>
 
-          <motion.p
-            className={`${sansation.className} text-md sm:text-xl font-light text-gray-700 mt-2`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 1.8 }}
-          >
-            Deals in Tiles, Electrical Goods, Sanitary Products and Construction Materials
-          </motion.p>
-        </motion.div>
+        <motion.p
+          className={`${sansation.className} text-md sm:text-xl font-light text-gray-700 mt-2`}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 1.8 }}
+        >
+          Deals in Tiles, Electrical Goods, Sanitary Products and Construction Materials
+        </motion.p>
+      </motion.div>
 
-
+      {/* Image Slider */}
       <div className={`${!isLoaded ? "invisible" : "visible"} transition-opacity duration-700`}>
-        {/* Slider First */}
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0, scale: 0.95 }}
@@ -126,10 +108,11 @@ const Hero = () => {
             <FaArrowRight size={20} />
           </button>
 
-          {/* Dots Navigation */}
+          {/* Dots */}
           <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
             {images.map((_, index) => (
-              <button title="button"
+              <button
+                title="dot"
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`h-3 w-3 rounded-full transition ${
@@ -138,7 +121,7 @@ const Hero = () => {
               ></button>
             ))}
           </div>
-        </motion.div> 
+        </motion.div>
       </div>
     </div>
   );
