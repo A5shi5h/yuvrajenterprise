@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import { Inter } from 'next/font/google';
 
 const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-inter', // Optional: CSS variable for advanced usage
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -17,17 +17,16 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="scroll-smooth">
-        <div className="fixed top-0 w-full z-10">
+      <body className="scroll-smooth bg-white text-black">
         <Navbar />
-        </div>
+        {/* Spacer to prevent layout shift due to fixed navbar */}
+        {/* <div className="h-[92px]" aria-hidden="true" /> */}
         {children}
       </body>
     </html>
-  )
+  );
 }
-

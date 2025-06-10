@@ -23,7 +23,7 @@ const ContactUs = () => {
 
   return (
     <>
-     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 py-12">
+     <div className="min-h-screen bg-gray-100 flex items-center justify-center px-2 py-12">
       <motion.div
         className="w-full max-w-5xl bg-white p-8 rounded-lg shadow-xl"
         initial={{ opacity: 0, y: 30 }}

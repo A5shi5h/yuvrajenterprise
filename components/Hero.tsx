@@ -21,7 +21,7 @@ const Hero = ({ isLoaded }) => {
   }, []);
 
   return (
-    <div className="relative pt-[100px] max-sm:pt-12 px-4 min-h-[80vh] overflow-hidden bg-white">
+    <div className="relative px-4 overflow-hidden mt-28 bg-white">
 
       {/* Dual curtain loader */}
       {!isLoaded && (
