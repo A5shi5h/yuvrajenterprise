@@ -23,17 +23,14 @@ export default function Page() {
   }, []);
 
   return (
-    <>
-      {/* Loader could go here if needed */}
-      <main className={`${isLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}>
-        <Hero isLoaded={isLoaded} />
-        <BestSellers />
-        <Marquee />
-        <ServicesSection />
-        <FeaturesSection />
-        <PromoBanner />
-        <Footer />
-      </main>
-    </>
+    <main className={`${isLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}>
+      <Hero isLoaded={isLoaded} />
+      <BestSellers />
+      <Marquee />
+      <ServicesSection />
+      <FeaturesSection />
+      <PromoBanner />
+      <Footer />
+    </main>
   );
 }
