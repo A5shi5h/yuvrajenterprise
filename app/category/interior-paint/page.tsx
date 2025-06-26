@@ -73,6 +73,7 @@ const InteriorPaints = () => {
                   alt={paint.imageAlt}
                   layout="fill"
                   objectFit="cover"
+                  loading="lazy"
                 />
               </div>
               <div className="p-4">
@@ -147,6 +148,7 @@ const InteriorPaints = () => {
                         alt={`${logo.split(".")[0]} logo`}
                         layout="fill"
                         objectFit="contain"
+                        loading="lazy"
                       />
                     </div>
                   ))}

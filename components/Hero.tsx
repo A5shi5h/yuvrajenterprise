@@ -90,6 +90,7 @@ const Hero = ({ isLoaded }) => {
             alt="Hero Image"
             fill
             className="object-cover rounded-lg"
+            loading="lazy"
           />
           <button
             title="prev-slide"

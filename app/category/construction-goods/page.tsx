@@ -74,6 +74,7 @@ const ConstructionGoods = () => {
                   alt={item.imageAlt}
                   layout="fill"
                   objectFit="cover"
+                  loading="lazy"
                 />
               </div>
               <div className="p-4">

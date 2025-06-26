@@ -16,6 +16,7 @@ const Marquee = () => {
           width={150}
           height={150}
           className="object-cover rounded-full shadow-lg shadow-black z-11 mb-10"
+          loading="lazy"
         />
       </div>
 

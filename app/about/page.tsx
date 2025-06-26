@@ -90,6 +90,7 @@ const AboutUs = () => {
                   width={200}
                   height={150}
                   className="rounded-md h-36"
+                  loading="lazy"
                 />
                 <h3 className="text-gray-600 text-lg leading-relaxed pt-2">{item.title}</h3>
                 <Link href={"category/"+item.description}><ArrowRight /></Link>
@@ -116,6 +117,7 @@ const AboutUs = () => {
                   width={500}
                   height={500}
                   className="rounded-lg object-cover shadow-lg"
+                  loading="lazy"
                 />
               </motion.div>
 

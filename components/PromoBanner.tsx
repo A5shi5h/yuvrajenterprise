@@ -26,6 +26,7 @@ const PromoBanner = () => {
             width={700}
             height={450}
             className="rounded-lg shadow-lg shadow-black w-full h-auto"
+            loading="lazy"
           />
         </motion.div>
 
