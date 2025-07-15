@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import { Inter } from "next/font/google";
 import nextFont from "next/font/local";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 const meriva = nextFont({
   src: "../../../public/fonts/meriva.ttf",
